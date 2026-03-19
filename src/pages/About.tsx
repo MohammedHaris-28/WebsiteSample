@@ -11,37 +11,37 @@ import SectionEntrance from "@/components/SectionEntrance";
 
 const team = [
   {
-    name: "Elena Vasquez",
+    name: "YYYY YYYY",
     role: "Principal Architect",
     exp: "18 years",
     qualification: "M.Arch, LEED AP",
   },
   {
-    name: "Marcus Chen",
+    name: "YYYY YYYY",
     role: "Chief Structural Engineer",
     exp: "22 years",
     qualification: "PhD Structural Engg.",
   },
   {
-    name: "Sarah Mitchell",
+    name: "YYYY YYYY",
     role: "Project Director",
     exp: "15 years",
     qualification: "MBA, PMP",
   },
   {
-    name: "James Okoye",
+    name: "YYYY YYYY",
     role: "Construction Manager",
     exp: "12 years",
     qualification: "B.Tech Civil",
   },
   {
-    name: "Anya Petrov",
+    name: "YYYY YYYY",
     role: "Cost Estimation Lead",
     exp: "10 years",
     qualification: "QS Certified",
   },
   {
-    name: "David Torres",
+    name: "YYYY YYYY",
     role: "BIM Specialist",
     exp: "8 years",
     qualification: "BIM Expert",
@@ -150,8 +150,8 @@ const About = () => (
 
                 {/* Stats */}
                 <div className="flex items-center gap-6 mt-4 text-sm text-muted-foreground">
-                  <span>👤 {t.exp}</span>
-                  <span>⭐ Senior</span>
+                  <span> {t.exp}</span>
+                  <span> Senior</span>
                 </div>
 
                 {/* Socials */}

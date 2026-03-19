@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 15% 98%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    --primary: 215 25% 27%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 10% 94%;
+    --secondary-foreground: 224 71% 4%;
+
+    --muted: 220 10% 90%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 210 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 10% 90%;
+    --ring: 210 100% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom tokens */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --card-shadow: 0 0 0 1px rgba(0,0,0,0.03), 0 2px 4px rgba(0,0,0,0.05), 0 12px 24px rgba(0,0,0,0.05);
+    --card-shadow-hover: 0 0 0 1px rgba(0,0,0,0.03), 0 8px 16px rgba(0,0,0,0.08), 0 20px 40px rgba(0,0,0,0.1);
+    --ease-smooth: cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Public Sans', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    box-shadow: var(--card-shadow);
+    transition: all 300ms var(--ease-smooth);
+  }
+
+  .glass-card:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-4px);
+  }
+
+  .glass-card-static {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    box-shadow: var(--card-shadow);
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28;
+  }
+
+  .label-mono {
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    @apply text-xs uppercase tracking-widest text-muted-foreground;
+  }
+
+  .heading-display {
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.1];
+    letter-spacing: -0.03em;
+  }
+
+  .heading-section {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-medium leading-[1.2];
+    letter-spacing: -0.03em;
+  }
+
+  .body-text {
+    @apply text-lg leading-relaxed max-w-[65ch];
+    color: hsl(var(--muted-foreground));
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .btn-press {
+    transition: transform 150ms var(--ease-smooth);
+  }
+  .btn-press:active {
+    transform: scale(0.98);
+  }
+}
+
+@layer utilities {
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}

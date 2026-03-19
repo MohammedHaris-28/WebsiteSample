@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig({
+  base: "/", // ✅ VERY IMPORTANT FIX
+
   server: {
     host: "::",
     port: 8080,
@@ -10,7 +12,9 @@ export default defineConfig({
       overlay: false,
     },
   },
+
   plugins: [react()],
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

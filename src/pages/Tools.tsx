@@ -50,7 +50,6 @@ const Tools = () => {
         return <StaircaseCalculator />;
 
       case "concrete":
-      case "cost":
         return (
           <div className="glass-card-static p-8 text-center rounded-2xl">
             <p className="text-muted-foreground">Tool coming soon...</p>

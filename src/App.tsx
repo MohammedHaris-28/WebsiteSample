@@ -12,6 +12,7 @@ import Tools from "./pages/Tools";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import AdminPanel from "./pages/AdminPage";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/admin" element={<AdminPanel />} />
         </Routes>
         <Footer />
       </BrowserRouter>
